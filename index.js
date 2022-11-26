@@ -10,6 +10,7 @@ addClient=require('./functionAddClients/addClient.js')
 regClient=require('./functionAddClients/registerClients.js')
 cAllEvent=require('./createQREvents/createAllEvent.js')
 pacQuest=require('./Questions/pacQuest/pacQuestions.js')
+_=require('lodash');
 
 const app = express();
 
@@ -27,11 +28,20 @@ pacQuest.createPacQuest(type);
 //addClient.createClient(user); Добавление участника
 //regClient.registerClient(r_user)
 
-app.use(express.static(path.resolve(__dirname,'static')));
 
 app.get('/',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'static','Main.html'))
+    tmp = req.query
+    if (_.isEmpty(tmp)) res.sendFile(path.resolve(__dirname,'static','Main.html'))
+    else
+    {
+        if ((tmp.name === '123') && (tmp.psw === '123')) {
+            //res.sendFile(path.resolve(__dirname,'static','Main.html'))
+            res.redirect('/?id=123')
+        }
+        else res.sendFile(path.resolve(__dirname,'static','Main.html'))
+    }
 })
+
 
 app.get('/setOfQuestions',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'static','setsOfQuestions.html'))
