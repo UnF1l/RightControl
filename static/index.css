@@ -1,43 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chakra+Petch&family=Open+Sans&family=Poppins&display=swap');
-* {
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: 'Golos Text';
+    src: local('Golos Text Regular'), local('Golos-Text-Regular'),
+    url('fonts/GolosText-Regular.woff2') format('woff2'),
+    url('fonts/GolosText-Regular.woff') format('woff'),
+    url('fonts/GolosText-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
-.reg{
-    display: flex;
-    justify-content: center;
-}
-h1{
-    font-family: "Open Sans";
-    margin-top: 120px;
-}
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-}
-.button{
-    background-color: rgba(88, 169, 165, 1);
-    border-radius: 7px;
-    height: 10vh;
-    width: 30vw;
-    align-items: center;
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-}
-a{
-    display: flex;
-    color: white;
-    justify-content: center;
-    font-family: 'Open Sans';
-    font-size: 26px;
-    text-decoration: none;
-    width: 100%;
+html{
     height: 100%;
 }
-a:active{
-    transform: translateY(3px);
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Golos Text';
+}
+header{
+    background: linear-gradient(45deg, #B2C541, #003274);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    text-decoration: none;
+}
+.head{
+    width: 12%;
+    margin-left: 40%;
+}
+.green{
+    font-size: 32px;
+    margin-left: 7%;
+}
+.word{
+    color: white;
+}
+body{
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 
+.mid{
+    display: grid;
+    grid-template-areas: "A C C"
+                         "B C C"
+                         "B C C";
+    width: 40%;
+    margin: 6% 0 0 30%;
+    font-size: 30px;
+}
+.title{
+    grid-area: A;
+
+}
+.void{
+    border-top: 1px solid black;
+}
+.text{
+    grid-area: C;
+    border-left: 1px solid black;
+    padding: 5px;
+}
+.button{
+    border-radius: 60px;
+    background-color: #B1C72E;
+    width: 20%;
+    height: 10%;
+    margin: 9% 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.participation{
+    font-size: 30px;
+    color: white;
+}
+
+
+
+.foot{
+    margin: 0 5%;
+    font-size: 16px;
+}
+
+footer{
+    background-color: #F3F3F3;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: auto;
+    bottom: 0;
 }
