@@ -17,7 +17,7 @@ function createClient(user) {
         }
     });
 
-    connection.query("INSERT INTO `db_log_clients`(`login`,`password`) VALUES ('"+ user.login +"','"+ user.password +"')",(err,rows,field)=>{
+    connection.query("INSERT INTO `db_log_clients`(`login`,`password`, 'role') VALUES ('"+ user.login +"','"+ user.password +"', 'user')",(err,rows,field)=>{
         if (err) throw err;
     });
 // закрытие подключения

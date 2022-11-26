@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* Записываем в переменные массив элементов-кнопок и подложку.
        Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
-    let modalButtons = document.querySelectorAll('.participation,.head'),
+    let modalButtons = document.querySelectorAll('.button,.head'),
         overlay      = document.querySelector('.b-popup');
 
 

@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>Страница</title>
     <link rel="stylesheet" href="index.css">
-    <script src="pop.js"> </script>
+    <script src="index.js"> </script>
+    <script src="index2.js"> </script>
 </head>
 <header>
     <div class="green">
@@ -28,11 +29,10 @@
             <span>Компания ведет собственную разработку ПО, осуществляет поддержку и развитие корпоративных ИТ-систем, разрабатывает программных роботов, занимается проектным управлением, импортозамещением, применяет искусственный интеллект и машинное обучение.</span>
         </div>
     </div>
-    <a   href="">
-        <div class="button">
-            <span class="participation" > Поучаствовать</span>
-        </div>
-    </a>
+    <button class="button" type="submit">
+        Поучаствовать
+    </button>
+
 </div>
 
 
@@ -47,16 +47,79 @@
             </div>
         </label>
         <label>
-            <input class="input1" type="password" name="psw">
+            <input class="input1" type="password" name="name">
             <div class="label__text">
                 Пароль
             </div>
         </label>
         <button class="button1" type="submit">Войти</button>
-        <a href="">Зарегистрироваться</a>
+        <a href="" class="registr">Зарегистрироваться</a>
 
     </form>
 </div>
+
+
+<div class="a-popup">
+    <form class="a-popup-content">
+        <span class="a-popup-head">Регистрация аккаунта</span>
+        <label>
+            <input class="input2" type="text" name="name">
+            <div class="label__text">
+                Фамилия
+            </div>
+        </label>
+        <label>
+            <input class="input2" type="text" name="name">
+            <div class="label__text">
+                Имя
+            </div>
+        </label>
+        <label>
+            <input class="input2" type="text" name="name">
+            <div class="label__text">
+                Отчество
+            </div>
+        </label>
+        <label>
+            <input class="input2" type="text" name="name">
+            <div class="label__text">
+                Почта
+            </div>
+        </label>
+        <label>
+            <input class="input2" type="password" name="name">
+            <div class="label__text">
+                Пароль
+            </div>
+        </label>
+        <label>
+            <input class="input2" type="text" name="name">
+            <div class="label__text">
+                Телефон
+            </div>
+        </label>
+        <label>
+            <input class="input2" type="text" name="name">
+            <div class="label__text">
+                Дата рождения
+            </div>
+        </label>
+        <input type="checkbox" id="politics" onclick="check();" value="" autocomplete="off"/>
+        Нажимая на кнопку "Зарегистрироваться", я даю <a href="politics.docx">согласие на обработку персональных данных.</a>
+        <button class="button1" type="submit">Зарегистрироваться</button>
+    </form>
+    <script>
+        function check() {
+            let submit = document.getElementsByName('submit')[0];
+            if (document.getElementById('politics').checked)
+                submit.disabled = '';
+            else
+                submit.disabled = 'disabled';
+        }
+    </script>
+</div>
+
+
 
 
 

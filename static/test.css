@@ -1,0 +1,13 @@
+body{
+    background: #296c91;
+}
+.back{
+    background: url("img/background.png") no-repeat;
+    margin-left: 4%;
+
+}
+.ground{
+    background: linear-gradient(#3AB8FF, #ffffff);
+    opacity: 0.5;
+    padding: 30%;
+}

@@ -1,0 +1,40 @@
+body{
+    position: relative;
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow-y: scroll;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+.box-qest{
+    border: 1px solid black;
+    width: 30%;
+    height: 35%;
+    margin-top: 10%;
+}
+.logo{
+    width: 20%;
+}
+.logo-img{
+    width: 20%;
+    height: auto;
+}
+table{
+    table-layout: fixed;
+    width: 60%;
+    height: 50%;
+    margin: 5% 20%;
+}
+.fot1{
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 45px 45px 0 0;
+}
+.fot2{
+    border: 1px solid black;
+    border-radius: 0 0 45px 45px;
+}
