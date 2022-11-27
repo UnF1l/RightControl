@@ -1,13 +1,39 @@
 body{
-    background: #296c91;
+
 }
 .back{
     background: url("img/background.png") no-repeat;
     margin-left: 4%;
-
 }
 .ground{
     background: linear-gradient(#3AB8FF, #ffffff);
     opacity: 0.5;
     padding: 30%;
+}
+table{
+    margin: 3%;
+}
+.table th, td{
+    display: flex;
+    border-collapse: collapse;
+    font-size: 30px;
+
+
+
+}
+.tableo, .first {
+
+
+    padding-bottom: 2%;
+
+}
+.first{
+    border-bottom: 1px solid #3AB8FF;
+}
+.output{
+    height: 5%;
+    background: #78b661;
+}
+.otstup{
+    margin-left: 1%;
 }
