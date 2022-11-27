@@ -106,21 +106,23 @@ font-size: 30px;
     background: rgba(0,0,0,0.5);
     opacity: 0;
     pointer-events: none;
+    margin-right: 80%;
 }
 .b-popup.active, .a-popup.active{
     opacity: 1;
     pointer-events: all;
+    margin-right: 80%;
 }
 .b-popup-content, .a-popup-content{
 
 
     border-radius: 45px;
     position: fixed;
-    top: 35%;
+    top: 25%;
     left: 38%;
     background: #ffffff;
     width: 400px;
-    padding: 25px;
+    padding: 3%;
 
 }
 label {
@@ -233,5 +235,15 @@ footer{
     bottom: 0;
 }
 
+@media screen and (max-width: 980px){
+    .b-popup-content{
+        top: 35%;
+        left: 25%;
+    }
+    .a-popup-content{
+        width: 80%;
+        left: 10%;
+    }
+}
 
 

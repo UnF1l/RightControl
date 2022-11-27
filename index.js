@@ -7,7 +7,6 @@ express=require('express');
 QRCode = require('qrcode');
 addClient=require('./functionAddClients/addClient.js')
 regClient=require('./functionAddClients/registerClients.js')
-cAllEvent=require('./createQREvents/createAllEvent.js')
 pacQuest=require('./Questions/pacQuest/pacQuestions.js')
 log=require('./login/login.js')
 _=require('lodash');
@@ -32,7 +31,7 @@ app.get('/',(req,res)=>{
             res.redirect('/')
         }
         else {
-            res.redirect('/chose')
+            res.redirect('/admin_in')
         }
     }
 })
@@ -77,16 +76,28 @@ app.get('/setQuestionNumber',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'static','setQuestionNumber.html'))
 })
 
-app.get('/adminMain',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'static','adminMain.html'))
+app.get('/admin',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin.html'))
 })
 
-app.get('/adminPanel',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'static','adminPanel.html'))
+app.get('/admin-info1',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin-info1.html'))
 })
 
-app.get('/adCheckPanel',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'static','adCheckPanel.html'))
+app.get('/admin-info2',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin-info2.html'))
+})
+
+app.get('/admin-info3',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin-info3.html'))
+})
+
+app.get('/admin-info4',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin-info4.html'))
+})
+
+app.get('/admin-info5',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin-info5.html'))
 })
 
 app.listen(PORT,()=>{
