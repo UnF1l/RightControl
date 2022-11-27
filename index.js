@@ -16,17 +16,6 @@ const app = express();
 
 const PORT =  process.env.PORT ?? 3000;
 let type='Frontend'
-//pacQuest.createPacQuest(type);
-//let nameEvent = 'New event';
-
-//cAllEvent.allEvents(nameEvent);
-
-//let user = {id:4,login:'Samadsa',password:'t61241'}
-//let r_user = {setLogin:'Samanta',setPassword:'geasfw',fno:'Dydka Viktor Sergeevich', email:'Swasfwar@mail.ru',phone:'89197425213',Birthday:'2022-10-12'}
-//addAdmin.createAddAdmin(user); Создание нового админа
-//deleteAdmin.deleteAdmin(user); Удаление админа
-//addClient.createClient(user); Добавление участника
-//regClient.registerClient(r_user)
 
 app.use(express.static(path.resolve(__dirname, 'static')))
 
@@ -38,20 +27,46 @@ app.get('/',(req,res)=>{
     else
     {
         let id = log.login(tmp)
-        //console.log(id)
+        console.log(id)
         if (id === -1) {
-            res.sendFile(path.resolve(__dirname,'static','Main.html'))
             res.redirect('/')
         }
         else {
-            res.sendFile(path.resolve(__dirname,'static','Main.html'))
-            res.redirect('/acc/?id='+id)
+            res.redirect('/chose')
         }
     }
 })
 
+app.get('/admin_in',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','admin_in.html'))
+})
+
+app.get('/chose',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','chose.html'))
+})
+
 app.get('/acc',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'static','acc.html'))
+})
+
+app.get('/test1',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','test1.html'))
+})
+
+app.get('/test2',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','test2.html'))
+})
+
+app.get('/test3',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','test3.html'))
+})
+
+app.get('/test4',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','test4.html'))
+})
+
+app.get('/test5',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'static','test5.html'))
 })
 
 app.get('/setOfQuestions',(req,res)=>{
